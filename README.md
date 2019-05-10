@@ -1,2 +1,2 @@
 # artyom-ganev-server
-This project contains sources of backend of https://artyom-ganev.github.io/ site
+This project contains backend sources of https://artyom-ganev.github.io/ site
