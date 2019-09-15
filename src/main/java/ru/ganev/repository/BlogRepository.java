@@ -14,6 +14,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * Blog Repository
+ *
+ * @author Artyom Ganev
+ */
 @Repository
 public class BlogRepository implements CrudRepository<Blog, UUID> {
     @Autowired

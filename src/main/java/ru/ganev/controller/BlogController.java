@@ -9,7 +9,11 @@ import ru.ganev.service.IBlogService;
 
 import java.util.List;
 
-
+/**
+ * Blog Controller
+ *
+ * @author Artyom Ganev
+ */
 @RestController
 public class BlogController {
 
