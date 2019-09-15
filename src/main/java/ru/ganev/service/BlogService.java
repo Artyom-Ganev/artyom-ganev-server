@@ -17,4 +17,9 @@ public class BlogService implements IBlogService {
     public List<Blog> getBlogList() {
         return productRepository.findAll();
     }
+
+    @Override
+    public Blog getBlog(UUID id) {
+        return productRepository.findById(id).orElse(null);
+    }
 }

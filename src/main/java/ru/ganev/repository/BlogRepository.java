@@ -36,7 +36,12 @@ public class BlogRepository implements CrudRepository<Blog, UUID> {
 
     @Override
     public Optional<Blog> findById(UUID uuid) {
-        return Optional.empty();
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Blog> cr = cb.createQuery(Blog.class);
+        Root<Blog> root = cr.from(Blog.class);
+        cr.where(cb.equal(root.get("id"), uuid));
+        TypedQuery<Blog> query = em.createQuery(cr);
+        return Optional.ofNullable(query.getSingleResult());
     }
 
     @Override
