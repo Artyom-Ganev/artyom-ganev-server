@@ -1,2 +1,1 @@
-# artyom-ganev-server
-This project contains backend sources of https://artyom-ganev.github.io/ site
+Working on backend for https://artyom-ganev.github.io/ site using Spring Boot
