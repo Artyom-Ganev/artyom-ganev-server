@@ -2,6 +2,7 @@ package ru.ganev.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 import ru.ganev.model.Blog;
 
 import javax.persistence.EntityManager;
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+@Repository
 public class BlogRepository implements CrudRepository<Blog, UUID> {
     @Autowired
     private EntityManager em;
