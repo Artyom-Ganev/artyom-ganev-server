@@ -38,7 +38,7 @@ public class Blog implements Serializable {
     @Column()
     private String link;
 
-    @Column()
+    @Column(name = "linkcaption")
     private String linkCaption;
 
     protected Blog() {
