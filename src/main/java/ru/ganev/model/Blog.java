@@ -15,7 +15,7 @@ import java.util.UUID;
  * @author Artyom Ganev
  */
 @Entity
-@Table(name = "BLOG")
+@Table(name = "blog")
 public class Blog implements Serializable {
 
     @Id
@@ -49,6 +49,10 @@ public class Blog implements Serializable {
         this.year = year;
         this.month = month;
         this.day = day;
+    }
+
+    public UUID getId() {
+        return id;
     }
 
     public String getTitle() {
