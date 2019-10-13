@@ -35,7 +35,7 @@ public class BlogController {
     @CrossOrigin
     @GetMapping("/{id}")
     @ResponseBody
-    public void getBlog(@PathVariable UUID id) {
-        blogService.getBlog(id);
+    public Blog getBlog(@PathVariable("id") UUID id) {
+        return blogService.getBlog(id);
     }
 }
