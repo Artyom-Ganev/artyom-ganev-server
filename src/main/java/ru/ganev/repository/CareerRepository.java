@@ -54,6 +54,7 @@ public class CareerRepository implements CrudRepository<Career, UUID> {
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<Career> cr = cb.createQuery(Career.class);
         Root<Career> root = cr.from(Career.class);
+        cr.orderBy(cb.desc(root.get("start_date")));
         cr.select(root);
         TypedQuery<Career> query = em.createQuery(cr);
         return query.getResultList();
