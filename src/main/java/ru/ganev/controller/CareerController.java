@@ -33,7 +33,7 @@ public class CareerController {
     List<Career> list() {
         return careerService.getList()
                 .stream()
-                .sorted(Comparator.comparing(Career::getStartDate))
+                .sorted(Comparator.comparing(Career::getStartDate).reversed())
                 .collect(Collectors.toList());
     }
 
