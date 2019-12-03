@@ -27,10 +27,10 @@ public class Career implements Serializable {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "start_date")
     private Date startDate;
 
-    @Column()
+    @Column(name = "end_date")
     private Date endDate;
 
     @Column()
