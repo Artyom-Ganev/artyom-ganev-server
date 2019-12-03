@@ -41,14 +41,17 @@ public class Blog implements Serializable {
     @Column(name = "linkcaption")
     private String linkCaption;
 
-    protected Blog() {
+    public Blog() {
     }
 
-    public Blog(String name, int year, int month, int day) {
-        this.title = name;
+    public Blog(UUID id, String title, int year, int month, int day, String link, String linkCaption) {
+        this.id = id;
+        this.title = title;
         this.year = year;
         this.month = month;
         this.day = day;
+        this.link = link;
+        this.linkCaption = linkCaption;
     }
 
     public UUID getId() {
