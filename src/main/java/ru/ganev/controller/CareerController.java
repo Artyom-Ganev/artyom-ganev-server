@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.ganev.model.Career;
 import ru.ganev.service.ICareerService;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 /**
  * Blog Controller
@@ -29,7 +31,10 @@ public class CareerController {
     @ResponseBody
     @RequestMapping("/")
     List<Career> list() {
-        return careerService.getList();
+        return careerService.getList()
+                .stream()
+                .sorted(Comparator.comparing(Career::getStartDate))
+                .collect(Collectors.toList());
     }
 
     @CrossOrigin
